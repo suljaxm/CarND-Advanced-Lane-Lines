@@ -78,7 +78,9 @@ I verified that my perspective transform was working as expected by drawing the 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff in `Step5`. First, I find the pixels that belong to the lane line by the code `hist()` function. I chose the two strongest peaks as the starting point for the initial lane line. Second, using the strategy of  `Sliding Windows`, I selected the lane line pixels for each segment.
+
 ![alt text][image5_1]
+
 The last, I fit lane lines with a 2nd order polynomial kinda. the lane line pixels, used their x and y pixel positions to fit a second order polynomial curve is `f(y) = Ay^2 + By + C`, and use `numpy.polyfit()` function.
 
 
